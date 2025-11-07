@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  Your JavaScript code goes here
+      //  Two Sum Problem Example
+      target = 7;
+      nums = [3, 3, 4, 2];
+      var twoSum = function (nums, target) {
+        for (let i = 0; i < nums.length; i++) {
+          for (let j = i; j < nums.length; j++) {
+            if (nums[i] + nums[j] == target) {
+              return [i, j];
+            }
+          }
+        }
+      };
+      console.log(twoSum(nums, target));
+
+      console.log("Hello World");
+    </script>
+  </body>
+</html>
