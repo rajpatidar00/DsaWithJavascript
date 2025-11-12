@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Int To Roman</title>
+  </head>
+  <body>
+    <h1>Hyy</h1>
+
+    <script>
+      function intToRoman(num) {
+        const values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+        const symbols = [
+          "M",
+          "CM",
+          "D",
+          "CD",
+          "C",
+          "XC",
+          "L",
+          "XL",
+          "X",
+          "IX",
+          "V",
+          "IV",
+          "I",
+        ];
+        let result = "";
+        for (let i = 0; i < values.length; i++) {
+          while (num >= values[i]) {
+            result += symbols[i];
+            num -= values[i];
+          }
+        }
+        return result;
+      }
+      intToRoman(345);
+      //   console.log(intToRoman(12));
+    </script>
+  </body>
+</html>
