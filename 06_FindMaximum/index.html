@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Maximum Number in an Array</title>
+  </head>
+  <body>
+    <h1>Find Maximum Number in an Array</h1>
+
+    <script>
+      console.log("Find Maximum Number in an Array");
+      let Arr = [1, 3, 6, 4, 57];
+
+      function findMaximum(arr) {
+        let maximum = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+          if (maximum < arr[i]) {
+            maximum = arr[i];
+          }
+        }
+        // console.log(maximum);
+        return maximum;
+      }
+      findMaximum(Arr);
+    </script>
+  </body>
+</html>
