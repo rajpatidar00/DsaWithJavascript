@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find the Index of a Target</title>
+  </head>
+  <body>
+    <h1>Find the Index of a Target</h1>
+
+    <script>
+      console.log("Find the Index of a Target");
+
+      let target = 10;
+      let index = -1;
+
+      function findIndexTarget(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          if (target == arr[i]) {
+            index = arr.indexOf(arr[i]);
+          }
+        }
+        return index;
+      }
+      console.log(findIndexTarget([10, 20, 30, 40, 50]));
+    </script>
+  </body>
+</html>
