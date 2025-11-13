@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Vowels in a String</title>
+  </head>
+  <body>
+    <h1>Count Vowels in a String</h1>
+    <script>
+      console.log("Count Vowels in a String");
+      let vowels = ["a", "o", "u", "i", "e"];
+      let word = "Jaadu bhai";
+      let count = 0;
+      
+      function countVowels(word) {
+          let slipWord = word.split("");
+        //   console.log(slipWord);
+          for (let i = 0; i < word.length; i++) {
+            if (vowels.includes(word[i])) {
+            //   console.log(word[i])
+            count++;
+            // console.log("vowels"+" "+ vowels[i]);
+            // console.log(count)
+          }
+        }
+        return count;
+      }
+      console.log(countVowels(word));
+    </script>
+  </body>
+</html>
