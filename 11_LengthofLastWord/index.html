@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Length of Last Word</title>
+  </head>
+  <body>
+    <h1>Length of Last Word</h1>
+    <script>
+      console.log("Length of Last Word");
+
+      let s = "hyy, there are     you   okay     ";
+
+      var lengthOfLastWord = function (s) {
+        let r = s.replace(/\s+/g, " ").trim();
+        let str = r.split(" ");
+        let lenOfStr = str.length;
+        let lastWord = str.slice(lenOfStr - 1, lenOfStr).toString().length;
+        return lastWord;
+      };
+
+      console.log(lengthOfLastWord(s));
+    </script>
+  </body>
+</html>
