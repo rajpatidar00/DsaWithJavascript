@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotate Array</title>
+  </head>
+  <body>
+    <h1>Rotate Array</h1>
+
+    <script>
+      console.log("Rotate Array");
+
+      let nums = [1, 2, 3, 4, 5];
+      let k = 2;
+
+      var rotateRight = function (nums, k) {
+        k = k % nums.length;
+        for (let i = 1; i <= k; i++) {
+          let RemoveLast = nums.pop();
+          nums.unshift(RemoveLast);
+        }
+        return nums;
+      };
+
+      console.log(rotateRight(nums, k));
+    </script>
+  </body>
+</html>
