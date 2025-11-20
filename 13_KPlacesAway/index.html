@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K Places Away</title>
+    <style>
+      body {
+        background-color: rgb(19, 18, 18);
+        color: wheat;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>K Places Away</h1>
+
+    <script>
+      console.log("K Places Away");
+      let nums = [0, 1, 1, 0, 1];
+      let nums2 = [0, 0, 0, 1, 0, 1];
+      let k = 2;
+      var kLengthApart = function (nums, k) {
+        let Zero = 0;
+        for (let i = 0; i < nums.length; i++) {
+          if (nums[i] === 1) {
+            if (i !== 0 && Zero < k) {
+              return false;
+            }
+            if (nums[0] === 0) {
+              return true;
+            }
+            Zero = 0;
+          } else {
+            Zero++;
+          }
+        }
+        return true;
+      };
+      console.log(kLengthApart(nums2, k));
+      //   kLengthApart(nums, k);
+    </script>
+  </body>
+</html>
